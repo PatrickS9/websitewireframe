@@ -1,0 +1,174 @@
+html, body{
+    margin: 0px;
+    height: 100%;
+}
+.layout{
+    display: grid;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    gap: 10px;
+    grid-template-areas: 
+    " a a a a a a b b b b b b "
+    " c c c c c c c c c c c c " 
+    " c c c c c c c c c c c c "
+    " d d d d e e e e f f f f "
+    " g g g h h h i i i j j j"
+    ;
+}
+
+.layout > div{
+    background-size: cover;
+}
+
+.a{
+    background-color: rgb(255, 0, 0);
+    grid-area: a;
+    background-image: url('https://cdn.vox-cdn.com/thumbor/fYRuzbQ2EvRavUEwWB_o9UdwhTk=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19157811/ply0947_fall_reviews_2019_tv_anime.jpg');
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+}
+
+.b{
+    grid-area: b;
+    background-color: rgb(58, 24, 12);
+    background-image: url('https://cdn57.androidauthority.net/wp-content/uploads/2019/06/My-Hero-Academia-best-anime-on-Hulu-840x470.jpg');
+    background-position-y: 40%;
+}
+
+.c{
+    background: url('https://media.comicbook.com/2017/08/my-hero-academia-1015617-1280x0.jpg');
+    grid-area: c;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 20%;
+    background-color: rgb(52, 31, 128);
+
+}
+
+.d{
+    background: rgb(37, 139, 68);
+    grid-area: d;
+    background-image: url('https://i0.wp.com/twinfinite.net/wp-content/uploads/2018/10/my-hero-academia.jpg?resize=700%2C420&ssl=1');
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+
+}
+
+.e{
+    background-color: rgb(40, 151, 118);
+    grid-area: e;
+    background-image: url('https://mechanicalanimereviews.files.wordpress.com/2017/06/izuku.jpg?w=706');
+
+}
+
+.f{
+    background-color: rgb(13, 92, 122);
+    grid-area: f;
+    background-image: url('https://qph.fs.quoracdn.net/main-qimg-c1b287bd0f72c0fa42a609fd80d2ad9c');
+    background-position-y: 20%;
+}
+.g{
+    grid-area: g;
+    background-color: rgb(92, 12, 56);
+    background-image: url('https://i2.wp.com/twincitiesgeek.com/wp-content/uploads/2020/03/Deku.jpg');
+    background-position-y: 30%;
+}
+
+.h{
+    grid-area: h;
+    background-color: rgb(70, 124, 39);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS7eqjWDDWF_VtrajzPQzu5byeks7lXOFzyvfcW6OOEwEtBCl4jC7Ho6GGAMWRprxKsKs&usqp=CAU');
+    background-position-y: 40%;
+
+}
+
+.i{
+    grid-area: i;
+    background-color: rgb(136, 158, 38);
+    background-image: url('https://pm1.narvii.com/6517/6e3160faf833b7975de0e21ceb06ccd736a5c0bf_hq.jpg');
+    background-position-y: 60%;
+}
+
+.j{
+    grid-area: j;
+    background-color: rgb(143, 130, 17);
+    background-image: url('https://bleedingcool.com/wp-content/uploads/2020/02/my-hero-academia-heroes-rising-social-1200x675.jpg');
+}
+
+
+
+@media only screen and (max-width: 1024px){
+    .layout{
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+        'g'
+        'h'
+        'i'
+        'j'
+        ;
+    }
+    .layout > div{
+        min-height: 300px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .layout{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+        'g'
+        'h'
+        'i'
+        'j'
+        ;
+
+    }
+
+    .layout > div{
+        min-height: 200px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .layout{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+        'g'
+        'h'
+        'i'
+        'j'
+        ;
+
+    }
+
+    .layout > div{
+        min-height: 150px;
+    }
+}
